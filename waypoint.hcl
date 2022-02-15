@@ -8,6 +8,8 @@ app "demo" {
             image = "saiyam911/cd-demo"
             tag   = "v3"
             local = false
+            username= ${{ secrets.DOCKER_USERNAME }}
+            password= ${{ secrets.DOCKER_PASSWORD }}
           }
         }
 
