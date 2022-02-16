@@ -15,8 +15,8 @@ app "demo" {
             image = "saiyam911/cd-demo"
             tag   = "v3"
             local = false
-            username= var.user
-            password= var.password
+            username = var.user
+            password = var.password
           }
         }
 
