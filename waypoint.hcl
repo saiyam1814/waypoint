@@ -1,5 +1,12 @@
 project = "hashitalks2022"
 
+variable "user" {
+    type = string
+}
+variable "password" {
+    type = string
+}
+
 app "demo" {
     build {
         use "pack" {} 
@@ -8,8 +15,8 @@ app "demo" {
             image = "saiyam911/cd-demo"
             tag   = "v3"
             local = false
-            username= ${{ secrets.DOCKER_USERNAME }}
-            password= ${{ secrets.DOCKER_PASSWORD }}
+            username= var.user
+            password= var.password
           }
         }
 
