@@ -13,7 +13,7 @@ app "demo" {
         registry {
           use "docker" {
             image = "saiyam911/cd-demo"
-            tag   = "v3"
+            tag   = "v4"
             local = false
             username = var.user
             password = var.password
