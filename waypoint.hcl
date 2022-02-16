@@ -13,7 +13,7 @@ app "demo" {
         registry {
           use "docker" {
             image = "saiyam911/cd-demo"
-            tag   = "v4"
+            tag   = "${substr(gitrefhash(), 0, 7)}-${formatdate("YYYYMMDD-hhmmss", timestamp())}"
             local = false
             username = var.user
             password = var.password
